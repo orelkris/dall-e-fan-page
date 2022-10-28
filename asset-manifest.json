@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/dall-e-fan-page/static/css/main.88041a26.css",
-    "main.js": "/dall-e-fan-page/static/js/main.70abd517.js",
+    "main.js": "/dall-e-fan-page/static/js/main.d99d3a31.js",
     "static/js/787.54a3202d.chunk.js": "/dall-e-fan-page/static/js/787.54a3202d.chunk.js",
     "static/media/clown-tea-party.png": "/dall-e-fan-page/static/media/clown-tea-party.d6d6e80c0f72d8d616f7.png",
     "static/media/lady-on-piano.png": "/dall-e-fan-page/static/media/lady-on-piano.61e76107bb7e91426199.png",
     "index.html": "/dall-e-fan-page/index.html",
     "main.88041a26.css.map": "/dall-e-fan-page/static/css/main.88041a26.css.map",
-    "main.70abd517.js.map": "/dall-e-fan-page/static/js/main.70abd517.js.map",
+    "main.d99d3a31.js.map": "/dall-e-fan-page/static/js/main.d99d3a31.js.map",
     "787.54a3202d.chunk.js.map": "/dall-e-fan-page/static/js/787.54a3202d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.88041a26.css",
-    "static/js/main.70abd517.js"
+    "static/js/main.d99d3a31.js"
   ]
 }
