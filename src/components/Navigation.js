@@ -19,14 +19,14 @@ export default function Navigation(props) {
   return (
     <nav className="nav__container">
       <Link
-        to="/"
+        to="/dall-e-fan-page/"
         className={currentPage === 'home' ? 'current-page' : ''}
         onClick={changePage}
       >
         Home
       </Link>
       <Link
-        to="/about"
+        to="/dall-e-fan-page/about"
         className={currentPage === 'about' ? 'current-page' : ''}
         onClick={changePage}
       >
