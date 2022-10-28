@@ -1,14 +1,14 @@
 const data = [
   {
     id: 1,
-    image: './images/me-logo.png',
+    image: './https://orelkris.github.io/images/me-logo.png',
     header: 'About Me',
     title: '',
     body: "I find life better, and I'm happier, when things are nice and simple.",
   },
   {
     id: 2,
-    image: './images/gnome-picnic.png',
+    image: './https://orelkris.github.io/images/gnome-picnic.png',
     header: 'Recommendations',
     title: 'Keeping cooking simple',
     body: '',
@@ -22,7 +22,7 @@ const data = [
   },
   {
     id: 4,
-    image: './images/tree-face.png',
+    image: './https://orelkris.github.io/images/tree-face.png',
     header: '',
     title: 'Simple decorations',
     body: '',
