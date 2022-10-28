@@ -9,7 +9,7 @@ export default function Navigation(props) {
 
     if (pageUrl === '/dall-e-fan-page/') {
       setCurrentPage('home');
-    } else if (pageUrl === '/dall-e-fan-page/dall-e-fan-page/about') {
+    } else if (pageUrl === '/dall-e-fan-page/about') {
       setCurrentPage('about');
     } else if (pageUrl === '/dall-e-fan-page/recommendations') {
       setCurrentPage('recommendations');
@@ -33,7 +33,7 @@ export default function Navigation(props) {
         About Me
       </Link>
       <Link
-        to="/recommendations"
+        to="/dall-e-fan-page/recommendations"
         className={currentPage === 'recommendations' ? 'current-page' : ''}
         onClick={changePage}
       >

@@ -9,7 +9,7 @@ export default function Card(props) {
       <div className="card__main">
         <h2 className="card__title">{title}</h2>
         <p className="card__body">{body}</p>
-        <Link to="/continue" className="card__read-more">
+        <Link to="/dall-e-fan-page/continue" className="card__read-more">
           See Larger Version
         </Link>
       </div>
