@@ -7,11 +7,11 @@ export default function Navigation(props) {
   const changePage = (event) => {
     const pageUrl = event.target.getAttribute('href');
 
-    if (pageUrl === '/') {
+    if (pageUrl === '/dall-e-fan-page/') {
       setCurrentPage('home');
-    } else if (pageUrl === '/about') {
+    } else if (pageUrl === '/dall-e-fan-page/dall-e-fan-page/about') {
       setCurrentPage('about');
-    } else if (pageUrl === '/recommendations') {
+    } else if (pageUrl === '/dall-e-fan-page/recommendations') {
       setCurrentPage('recommendations');
     }
   };

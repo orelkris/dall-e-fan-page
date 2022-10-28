@@ -20,13 +20,13 @@ function App() {
       </div>
 
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/dall-e-fan-page/">
           <div className="content__container">
             <Main />
             <Sidebar />
           </div>
         </Route>
-        <Route path="/about">
+        <Route path="/dall-e-fan-page/about">
           <About />
         </Route>
       </Switch>
