@@ -8,6 +8,7 @@ import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
 import About from './components/pages/About';
 import Recommendations from './components/pages/Recommendations';
+import Popup from './components/Popup';
 
 function App() {
   return (
@@ -34,7 +35,6 @@ function App() {
           <Recommendations />
         </Route>
       </Switch>
-
       <Footer />
     </div>
   );

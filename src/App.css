@@ -51,6 +51,7 @@ button {
   /* box-shadow */
   --box-shadow: 3px 3px 8px 3px rgba(32, 32, 32, 0.479),
     2px 2px 5px 3px rgba(156, 156, 156, 0.479);
+  --box-shadow-dark: 3px 3px 8px 5px rgba(0, 0, 0, 0.479);
   --box-shadow-all: 0 0 5px 3px rgba(0, 0, 0, 0.479);
 }
 
@@ -317,9 +318,9 @@ a {
 
 .card__read-more,
 .featured__read-more {
-  text-decoration: none;
+  color: var(--sus__clr-two);
   font-weight: 700;
-
+  text-decoration: none;
   transition: all 350ms;
 }
 
@@ -327,8 +328,15 @@ a {
 .card__read-more:focus,
 .featured__read-more:hover,
 .featured__read-more:focus {
+  cursor: pointer;
   color: var(--hon__clr-one);
   text-decoration: underline;
+}
+
+@media screen and (max-width: 700px) {
+  .card__read-more {
+    display: none;
+  }
 }
 
 /* CARD */
@@ -354,6 +362,16 @@ a {
 
 .card__main {
   order: 2;
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 700px) {
+  .card__main {
+    margin-left: 0;
+  }
+
+  .article__card-container {
+  }
 }
 
 .card__secondary {
@@ -363,7 +381,6 @@ a {
 @media screen and (min-width: 701px) {
   .article__card-container {
     flex-direction: row;
-    gap: 0.5rem;
   }
 
   .card__main {
@@ -379,7 +396,7 @@ a {
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (min-width: 600px) and (max-width: 750px) {
   .article__card-container {
     gap: 1rem;
   }
@@ -387,7 +404,7 @@ a {
 
 @media screen and (min-width: 600px) and (max-width: 700px) {
   .card__main {
-    margin-top: -4.4rem;
+    margin-top: -4.2rem;
   }
 
   .card__info {
@@ -603,4 +620,60 @@ a {
 
 .image {
   width: 100%;
+}
+
+/* POPUP */
+.popup__container {
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  animation: fadeIn 500ms forwards;
+}
+
+.popup__close {
+  font-size: 2rem;
+  color: #fff;
+  display: inline-block;
+  position: relative;
+  left: 100%;
+
+  transition: all 300ms;
+}
+
+.popup__close:hover {
+  cursor: pointer;
+  color: var(--sus__clr-one);
+  transform: scale(1.5);
+}
+
+.popup__close:focus,
+.popup__close:active {
+  color: var(--sus__clr-two);
+}
+
+.popup__image {
+  width: 25rem;
+  height: auto;
+  box-shadow: none;
+  box-shadow: var(--box-shadow-dark);
+  animation: fadeIn 500ms forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
