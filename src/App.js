@@ -22,16 +22,16 @@ function App() {
       </div>
       <Router basename={process.env.PUBLIC_URL}>
         <Switch>
-          <Route exact path="/dall-e-fan-page/">
+          <Route path="/dall-e-fan-page/">
             <div className="content__container">
               <Main />
               <Sidebar />
             </div>
           </Route>
-          <Route path="/dall-e-fan-page/about">
+          <Route path="/about">
             <About />
           </Route>
-          <Route path="/dall-e-fan-page/recommendations">
+          <Route path="/recommendations">
             <Recommendations />
           </Route>
         </Switch>
