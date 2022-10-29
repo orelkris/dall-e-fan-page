@@ -578,3 +578,14 @@ a {
     margin: 0;
   }
 }
+
+/* RECOMMENDATIONS */
+.recommend__container {
+  padding: 1.5rem;
+  display: grid;
+  grid-template: 100px 400px 300px / 250px 250px 250px 250px;
+}
+
+.image {
+  width: 100%;
+}

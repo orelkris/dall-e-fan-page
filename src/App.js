@@ -7,6 +7,7 @@ import Main from './components/Main';
 import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
 import About from './components/pages/About';
+import Recommendations from './components/pages/Recommendations';
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
         </Route>
         <Route path="/dall-e-fan-page/about">
           <About />
+        </Route>
+        <Route path="/dall-e-fan-page/recommendations">
+          <Recommendations />
         </Route>
       </Switch>
 

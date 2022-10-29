@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 export default function Card(props) {
   const { cardImage, title, body, date, numOfComments } = props;
-  console.log(cardImage);
   return (
     <article className="article__card-container">
       <div className="card__main">

@@ -1,19 +1,29 @@
-import React, { useState } from 'react';
-import { Link, Switch, Route } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Navigation(props) {
   const [currentPage, setCurrentPage] = useState('home');
+  const [toggleClicked, settoggleClicked] = useState(true);
 
-  const changePage = (event) => {
-    const pageUrl = event.target.getAttribute('href');
+  useEffect(() => {
+    changePageUrl();
+  }, [toggleClicked]);
 
-    if (pageUrl === '/dall-e-fan-page/') {
+  const changePageUrl = () => {
+    const fullPageUrl = window.location.href.split(['/']);
+    const pageUrl = fullPageUrl[fullPageUrl.length - 1];
+
+    if (pageUrl === '') {
       setCurrentPage('home');
-    } else if (pageUrl === '/dall-e-fan-page/about') {
+    } else if (pageUrl === 'about') {
       setCurrentPage('about');
-    } else if (pageUrl === '/dall-e-fan-page/recommendations') {
+    } else if (pageUrl === 'recommendations') {
       setCurrentPage('recommendations');
     }
+  };
+
+  const updateCurrentPage = () => {
+    settoggleClicked((prevState) => !prevState);
   };
 
   return (
@@ -21,21 +31,21 @@ export default function Navigation(props) {
       <Link
         to="/dall-e-fan-page/"
         className={currentPage === 'home' ? 'current-page' : ''}
-        onClick={changePage}
+        onClick={updateCurrentPage}
       >
         Home
       </Link>
       <Link
         to="/dall-e-fan-page/about"
         className={currentPage === 'about' ? 'current-page' : ''}
-        onClick={changePage}
+        onClick={updateCurrentPage}
       >
         About Me
       </Link>
       <Link
         to="/dall-e-fan-page/recommendations"
         className={currentPage === 'recommendations' ? 'current-page' : ''}
-        onClick={changePage}
+        onClick={updateCurrentPage}
       >
         Recommendations
       </Link>
