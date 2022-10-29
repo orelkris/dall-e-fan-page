@@ -583,7 +583,22 @@ a {
 .recommend__container {
   padding: 1.5rem;
   display: grid;
-  grid-template: 100px 400px 300px / 250px 250px 250px 250px;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  grid-auto-columns: 1fr;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 700px) {
+  .recommend__container {
+    grid-template: 1fr / repeat(1, 1fr);
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 900px) {
+  .recommend__container {
+    grid-template: 1fr / repeat(2, 1fr);
+  }
 }
 
 .image {
