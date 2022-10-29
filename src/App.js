@@ -1,5 +1,5 @@
 import './App.css';
-import { HashRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import React from 'react';
 import Header from './components/Header';
 import Navigation from './components/Navigation';
@@ -20,22 +20,20 @@ function App() {
           <Navigation />
         </div>
       </div>
-      <Router basename={process.env.PUBLIC_URL}>
-        <Switch>
-          <Route path="/dall-e-fan-page/">
-            <div className="content__container">
-              <Main />
-              <Sidebar />
-            </div>
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/recommendations">
-            <Recommendations />
-          </Route>
-        </Switch>
-      </Router>
+      <Switch>
+        <Route path="/dall-e-fan-page/">
+          <div className="content__container">
+            <Main />
+            <Sidebar />
+          </div>
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/recommendations">
+          <Recommendations />
+        </Route>
+      </Switch>
       <Footer />
     </div>
   );
