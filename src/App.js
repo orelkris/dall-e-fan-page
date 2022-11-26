@@ -1,5 +1,5 @@
 import './App.css';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import React from 'react';
 import Header from './components/Header';
 import Navigation from './components/Navigation';
@@ -21,6 +21,9 @@ function App() {
         </div>
       </div>
       <Switch>
+        <Route exact path="/">
+          <Redirect to="/dall-e-fan-page/" />
+        </Route>
         <Route exact path="/dall-e-fan-page/">
           <div className="content__container">
             <Main />
@@ -32,6 +35,9 @@ function App() {
         </Route>
         <Route path="/dall-e-fan-page/recommendations">
           <Recommendations />
+        </Route>
+        <Route path="*">
+          <Redirect to="/dall-e-fan-page/" />
         </Route>
       </Switch>
       <Footer />
